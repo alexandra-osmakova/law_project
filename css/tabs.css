@@ -1,0 +1,24 @@
+#history section {
+  display: none;
+}
+#history a {
+  display: block;
+  margin: 10px auto;
+  width: 70%;
+  padding: 15px 25px;
+  font-weight: 600;
+  text-align: left;
+  color: #000;
+  border: 1px solid #333;
+  border-radius: 10px;
+  z-index: 10;
+  text-decoration: none;
+  transition: 0.5s;
+}
+#history a:hover,
+#history a:focus,
+#history a:active {
+  color: #fff;
+  cursor: pointer;
+  background-color: #333;
+}
