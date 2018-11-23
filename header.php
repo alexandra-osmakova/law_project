@@ -1,3 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="shortcut icon" type="image/png" href="../img/favicon.png">
+	<link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="../css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/modal.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">	
+</head>
+<body>
 <div class="navbar">
 	<div class="container">
 		<div class="navbar-top">
@@ -86,11 +104,11 @@
 			<span></span>
 		</div>
 		<ul class="menu__links">
-			<li class='menu__links-item'><a href="about">О нас</a></li>
-			<li class='menu__links-item'><a href="services">Услуги</a></li>
-			<li class='menu__links-item'><a href="article">Статьи</a></li>
-			<li class='menu__links-item'><a href="contact">Контакты</a></li>
-			<li class="signup_nav_section menu__links-item"><a href="signup">Регистрация</a> | <a href="signin">Вход</a></li>
+			<li class='menu__links-item'><a href="/about">О нас</a></li>
+			<li class='menu__links-item'><a href="/services">Услуги</a></li>
+			<li class='menu__links-item'><a href="/article">Статьи</a></li>
+			<li class='menu__links-item'><a href="/contact">Контакты</a></li>
+			<li class="signup_nav_section menu__links-item"><a href="/signup">Регистрация</a> | <a href="/signin">Вход</a></li>
 			<li class="hidden_telephon">
 				<div class="nav-number"><a class="nav_href_tel" href="tel: +7(843)518-89-89"><i class="fa fa-phone"></i><span class='tel_number'>+7
 							(843) 518-89-89</span> </a></div>

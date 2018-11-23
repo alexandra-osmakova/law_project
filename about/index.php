@@ -5,19 +5,7 @@
 	<title>О нас | Юрбизнесгруп</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="initial-scale=1, width=device-width, user-scalable=no">
-	<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Old+Standard+TT:400,700&amp;subset=cyrillic" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
 	<link rel="shortcut icon" type="image/png" href="../img/favicon.png">
-	<link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
-	<link rel="stylesheet" type="text/css" href="../css/fonts.css">
-	<link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
-	<link rel="stylesheet" type="text/css" href="../css/modal.css">
-	<link rel="stylesheet" type="text/css" href="../css/style.css">
-
-	<script src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript"></script>
 </head>
 
 <body>

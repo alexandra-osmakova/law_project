@@ -165,9 +165,12 @@
 		</div>
 	</div>
 </section>
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript"></script>
 <script type="text/javascript" src="/js/scripts.js"></script>
 <script type="text/javascript" src="js/swiper.min.js"></script>
-<script src="js/jquery.spincrement.min.js"></script>
+<!--
 <script type="text/javascript">
 	
 	$('#list button').click(function () {
@@ -266,4 +269,4 @@ $(window).scroll(function () {
 		$('.navbar').css('top', "0").css('box-shadow', "none");
 	}
 });
-</script>
+</script> -->

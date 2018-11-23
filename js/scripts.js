@@ -103,6 +103,51 @@ $(document).ready(function () {
 });
 
 
+$('#list button').click(function(){
+	if($('#services-modal').hasClass('active')){
+		$('#services-modal').css('opacity',"0").css('z-index',"-1").removeClass('active');
+		$('#services-modal .modal-container').css('transform', "scale(0.5,0.5)");
+		$('.modal-header h3').empty();
+		$('table tr').removeClass('nameFirst');
+	}
+	else{
+		$('#services-modal').css('opacity',"1").css('z-index',"10000").addClass('active');
+		$('#services-modal .modal-container').css('transform',"scale(1,1)");
+		var name = $(this).parent();
+		var nameFirst = $(name).parent();
+		nameFirst.addClass('nameFirst')
+		$('.modal-header h3').text($('.nameFirst > td:first-child').text());
+	}
+});
+$('.services-close-modal').click(function(){
+		$('#services-modal').css('opacity',"0").css('z-index',"-1").removeClass('active');
+		$('#services-modal .modal-container').css('transform', "scale(0.5,0.5)");
+		$('.modal-header h3').empty();
+		$('table tr').removeClass('nameFirst');
+});
+	$(document).mouseup(function (e){ // событие клика по веб-документу
+	var div = $(".modal-container, .modal"); // тут указываем ID элемента
+	if (!div.is(e.target) // если клик был не по нашему блоку
+		&& div.has(e.target).length === 0) { // и не по его дочерним элементам
+		$('#services-modal').css('opacity',"0").css('z-index',"-1").removeClass('active');	
+		$('#services-modal .modal-container').css('transform', "scale(0.5,0.5)");
+		$('.modal-header h3').empty();
+		$('table tr').removeClass('nameFirst');
+		$('.modal-overlay').removeClass('active');
+		$('.modal').removeClass('active');
+	}
+});
+		$(document).keydown(function(eventObject){
+			if (eventObject.which == 27){
+				$('#services-modal').css('opacity',"0").css('z-index',"-1").removeClass('active');	
+				$('#services-modal .modal-container').css('transform', "scale(0.5,0.5)");
+				$('.modal-header h3').empty();
+				$('table tr').removeClass('nameFirst');
+				$('.modal-overlay').removeClass('active');
+				$('.modal').removeClass('active');
+			}
+		});
+
 var select_city = document.getElementsByClassName('select_city')[0];
 var select_city__options = document.getElementsByClassName('select_city__option');
 var nav_href_tel = document.getElementsByClassName('nav_href_tel')[0];
@@ -129,13 +174,6 @@ select_city.addEventListener('change', function () {
 });
 
 var menu__icon = document.getElementsByClassName('menu__icon')[0];
-var menu = document.getElementsByClassName('menu')[0];
-
-menu__icon.addEventListener('click', menu_open);
-
-function menu_open() {
-    menu.classList.toggle('menu_visible');
-}
 
 var header_burger_menu = document.getElementsByClassName("header_burger_menu")[0];
 

@@ -560,6 +560,10 @@ h1, h2{font-family: "Proxima Nova"!important;text-transform: uppercase; font-siz
     display: none!important;
 }
 
+.hidden_telephon .tel_number {
+    margin: 0 auto;
+}
+
 .menu__icon span {
     display: block;
     position: absolute;
@@ -2150,12 +2154,17 @@ h1, h2{font-family: "Proxima Nova"!important;text-transform: uppercase; font-siz
             font-size: 15px;
         }
 
+        .right-block {
+            width: 40%;
+        }
+
         .table_price{
             width: 25%;
         }
 
         .navbar-top {
             flex-wrap: wrap;
+            width: 60%;
         }
 
         .right-block__content_wrap {

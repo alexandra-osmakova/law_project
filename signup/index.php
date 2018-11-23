@@ -9,13 +9,7 @@
   <title>Регистрация</title>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1, width=device-width, user-scalable=no">
-  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="shortcut icon" type="image/png" href="../img/logo1.png">
-  <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT:400,700&amp;subset=cyrillic" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
-  <link href="https://fonts.googleapis.com/css?family=Marmelad" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 
 <body>
