@@ -1,6 +1,8 @@
 <?php
   error_reporting(0);
   require "../database_controll/db.php";
+  $blog = R::load('blogs', $_GET['id']);
+  date_default_timezone_set('Europe/Moscow');
 ?>
 <!DOCTYPE html>
 <html>
@@ -12,11 +14,11 @@
 </head>
 <body style="background: #00a89c; background-image: url(../img/test-back.png);">
  <div class="container" style="margin-top: 37px;">
-  <p><a href="admin.php">Назад</a></p>
+  <p><a href="admin_test.php">Назад</a></p>
  
- <form method="POST" action="editpost.php">
+ <form method="POST" action="editpost.php?id=<?=$blog->id?>">
 	<div class="form-group">
-	 <input class="form-control"  type="text" name="title" value="<?php echo $blog->title ?>"><br>
+	 <input class="form-control"  type="text" name="title" value="<?php echo $blog->title?>"><br>
 	 <textarea rows="5" class="form-control" type="text" name="content"><?php echo nl2br($blog->content) ?></textarea><br>
      <p>Рекомендованный размер изображения: 2100х1400</p>
      <input type="hidden" name="MAX_FILE_SIZE" value="5242880" />
@@ -26,8 +28,6 @@
 </form>
 
 <?php
-  $blog = R::load('blogs', $_GET['id']);
-  date_default_timezone_set('Europe/Moscow');
   if(isset($_POST['editpost']))
   {
        // Максимально допустимый размер загружаемого файла - 5Мб
@@ -70,12 +70,12 @@
                    }
               }
          }
-    }    
+    }        
   $blog->title = $_POST['title'];
   $blog->content = $_POST['content'];
   $blog->datetime = date('Y-m-d H:i:s');
   $blog->img = $NewFilePatch;
-  R::store( $blog );
+  R::store($blog);
   	echo '<div style="color: green;"><p><strong>Запись успешно отредактирована</strong></p></div>';
   }
  ?>

@@ -1,23 +1,29 @@
 <?
-require('admin.php');
+require "../database_controll/db.php";
+if($_SESSION['logged_user'])
+{
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+	<title>Администратор | Юрбизнесгруп</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width, user-scalable=no">
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
-    <link href="https://fonts.googleapis.com/css?family=Marmelad" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">	
-
-    <title>Добро пожаловать</title>
+	<link rel="shortcut icon" type="image/png" href="../img/favicon.png">
+	<link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="../css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="../css/animate.css">
+	<link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">	
 </head>
-<body>
-<div class="navbar">
+<body> 
+	
+	<div class="navbar">
 		<div class="container">
 			<div class="navbar-top">
 				<div class="nav-logo"><a class="nav-href" href="/">ООО «ЮРБИЗНЕСГРУП»</a></div>
@@ -54,9 +60,10 @@ require('admin.php');
 				</ul>
 			</div>
 		</div>
-  </div>
-  <section id="signedin_user">
-      <div class="signedin_user_content">
+	</div>
+	
+	<section id="signedin_user" style="min-height: 68.2%">
+      <div class="signedin_user_content" style="margin-left: 26%">
         <h1>Здравствуйте, admin!</h1>
             <h3>Вам доступны следующие действия</h3>
         <ul>
@@ -75,7 +82,7 @@ require('admin.php');
                         <path fill="#17438b" d="m422 76h-30v-30c0-11-9-20-20-20h-352c-11 0-20 9-20 20v320c0 27.6 22.4 50 50 50h342c27.6 0 50-22.4 50-50v-270c0-11-9-20-20-20zm0 290c0 16.5-13.5 30-30 30h-342c-16.5 0-30-13.5-30-30v-320h352v305c0 13.8 11.2 25 25 25 5.5 0 10-4.5 10-10s-4.5-10-10-10c-2.8 0-5-2.2-5-5v-255h30v270z"/>
                     </svg>
                 </div>
-                <span>Управление статьями</span>
+                <span><a href="admin_test.php" style="text-decoration: none">Управление статьями</a></span>
             </li>
         </ul>
       </div>
@@ -115,3 +122,9 @@ require('admin.php');
 </section>
 </body>
 </html>
+<?}?>
+<?if($_SESSION['logged_user']->login != 'admin')
+ {
+   echo '<div class="color:red">Вы не можете просматривать данную страницу!</div>';
+ }
+ ?>

@@ -1,34 +1,24 @@
 @font-face {
     font-family: "Proxima Nova";
-    src: url('../fonts/ProximaNova/ProximaNova-Bold.eot');
-    src: url('../fonts/ProximaNova/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/ProximaNova/ProximaNova-Bold.ttf') format('truetype');
+    src: url(../fonts/ProximaNova/ProximaNova-Bold.ttf);
     font-style: bold;
     font-weight: 500;
 }
 
 @font-face {
     font-family: "Proxima Nova";
-    src: url('../fonts/ProximaNova/ProximaNova-Regular.eot');
-    src: url('../fonts/ProximaNova/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/ProximaNova/ProximaNova-Regular.ttf') format('truetype');
+    src: url(../fonts/ProximaNova/ProximaNova-Regular.ttf);
     font-style: normal;
     font-weight: 400;
 }
 
 @font-face {
     font-family: "Proxima Nova";
-    src: url('../fonts/ProximaNova/ProximaNova-Light.eot');
-    src: url('../fonts/ProximaNova/ProximaNova-Light.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/ProximaNova/ProximaNova-Light.ttf') format('truetype');
+    src: url(../fonts/ProximaNova/ProximaNova-Light.ttf);
     font-style: normal;
     font-weight: 300;
 }
 
-* {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
 
 html, body {width: 100%;height: 100%;font-size: 16px;}
 a, button, div{outline: none !important;transition: 0.5s}
@@ -69,7 +59,7 @@ h1, h2{font-family: "Proxima Nova"!important;text-transform: uppercase; font-siz
 
 .navbar{padding: 0;margin-bottom: 0;background: rgba(255,255,255,1);position: fixed;z-index: 100;width: 100%;;transition: 0.2s}
 .navbar a{color: #000}
-.navbar-top{padding-top: 1.25rem;width: 50%;position: relative;display: flex;align-items: center;}
+.navbar-top{padding-top: 1.25rem;width: 50%;position: relative;display: flex;}
 .navbar-top .nav-logo{font-size: 1rem;font-weight: bold;}
 .navbar-top .nav-number{font-size: 1rem;font-weight: bold;margin-right: 3.125rem;}
 .navbar-top .nav-number i{margin-right: 0.625rem;}
@@ -92,7 +82,6 @@ h1, h2{font-family: "Proxima Nova"!important;text-transform: uppercase; font-siz
 .right-block{width: 50%; display: flex; justify-content: flex-end; align-items: center; padding-top: 1.25rem;}
 .right-block__content_wrap{width: 50%;display: flex;align-items: center;justify-content: space-around;}
 .search-btn {margin: 0 0 0 0.625rem;}
-.nav-href svg {height: 35px;}
 .nav_href_tel{display: flex;align-items: center;}
 .nav_href_tel:focus {text-decoration: none}
 .nav_href_tel:hover {text-decoration: none}
@@ -117,8 +106,7 @@ h1, h2{font-family: "Proxima Nova"!important;text-transform: uppercase; font-siz
 #main .slide-2 .overlay{transform: scale(-1,1);}
 #main .swiper-button-prev{left: 2rem}
 #main .swiper-button-next{right: 2rem}
-#main .more-btn{text-align:center;display: table;color: #fff;background-color: rgb(23, 67, 139);width: 12.5rem;height: 3.125rem;display: flex;align-items: center;justify-content: center;margin-top: 2.875rem;border: unset;}
-#main button:hover {text-decoration: underline;}
+#main .more-btn{display: table;color: #fff;background-color: rgb(23, 67, 139);width: 12.5rem;height: 3.125rem;display: flex;align-items: center;justify-content: center;margin-top: 2.875rem;}
 #main .all-btn{margin: auto;width: 12.5rem;margin-top: 3.125rem;background-color: transparent;border: 0.125rem solid #fff;padding: 0.9375rem 0}
 #main .all-btn:hover{background-color: #fff;color: #000}
 #main .all-btn:hover .shp0{fill: #000}
@@ -149,7 +137,7 @@ h1, h2{font-family: "Proxima Nova"!important;text-transform: uppercase; font-siz
 #culture .advantage_img_fifth{background-image: url(../img/005-auction.svg);}
 /* SERVICES */
 
-#services{padding: 6.25rem 0;}
+#services{padding-bottom: 6.25rem;}
 #services h1{text-align: center;margin-bottom: 3.125rem;}
 #services .swiper-slide {background-position: center center;background-repeat: no-repeat;background-size: cover;height: 15.625rem;position: relative;}
 #services .col-md-6{padding: 0}
@@ -160,11 +148,11 @@ h1, h2{font-family: "Proxima Nova"!important;text-transform: uppercase; font-siz
 #services .slide-5{background-image: url(../img/5-service.png);}
 #services .slide-6{background-image: url(../img/6-service.png);}
 #services .description{position: absolute;width: 95%;margin-top: 1.25rem;padding: 1.875rem 0px 1.875rem 1.875rem;color: #000;z-index: 10;font-weight: 700;}
-#services .description h4{line-height: 1.6rem;font-weight:700;text-transform:uppercase; color: #fff;}
-#services .more-btn{position: absolute;display: table;padding: 0.9375rem 2.8125rem;right: 1.5625rem;bottom: 1.5625rem;background-color: #ffffff;opacity: 0;color: #17438b;cursor: pointer;}
+#services .description h4{font-weight:700;text-transform:uppercase;}
+#services .more-btn{position: absolute;display: table;padding: 0.9375rem 2.8125rem;right: 1.5625rem;bottom: 1.5625rem;background-color: rgb(23, 67, 139);opacity: 0;color: #fff;cursor: pointer;}
 #services  .swiper-slide:hover .more-btn{opacity: 1;z-index: 10;}
-#services .overlay{position: absolute;z-index: 5;width: 100%;height: 100%;background:rgba(23, 67, 140, 0.4);background-size: 150% auto ;transition: 0.3s;}
-#services .swiper-slide:hover .overlay{background:rgba(23, 67, 140, 0.8)}
+#services .overlay{position: absolute;z-index: 5;width: 100%;height: 100%;background: linear-gradient(to left, transparent 50%, rgba(255,255,255,0.8) 100%);background-size: 150% auto ;transition: 0.3s;}
+#services .swiper-slide:hover .overlay{background-position: right center;}
 #services .swiper-slide:hover .description{color: #fff}
 #services h1{font-family: 'PlayfairDisplay-Regular';font-size: 1.25rem;}
 
@@ -291,14 +279,13 @@ h1, h2{font-family: "Proxima Nova"!important;text-transform: uppercase; font-siz
 /* LIST */
 
 #list{padding: 14.375rem 0 6.25rem 0;}
-#list h2 {font-size: 1.25rem;color: #282828;font-family: 'PlayfairDisplay-Regular'!important;text-align: center; margin-bottom: 3rem;}
 #list table{width: 100%;border-bottom: 0.1875rem solid  #000;transition: 0.5s}
 #list table tr{transition: 0.5s; border-left: 0.125rem solid rgba(123, 143, 182,0)}
 #list table td{padding: 1.5625rem 1.875rem;transition: 0.5s}
 #list table tr:nth-child(1){border-top: 0.1875rem solid  #000;border-bottom: 0.1875rem solid  #000;font-weight: bold;border-left:none !important;background-color: transparent !important}
 #list table tr:nth-child(1) td{padding: 0.9375rem 1.875rem;}
 #list table tr:hover{background-color: #e6ebf2;border-left: 0.125rem solid rgba(123, 143, 182,1)}
-#list table button{width: auto;margin: auto;display: block;background-color: transparent;border: 0.125rem solid #17438b;padding: 0.625rem;color: #17438b}
+#list table button{width: 80%;margin: auto;display: block;background-color: transparent;border: 0.125rem solid #17438b;padding: 0.625rem;color: #17438b}
 #list table button:hover{background-color: #17438b;color: #fff};
 #list table button {width: 8.75rem;height: 3.125rem;background-color: #17438b;border: 0.125rem solid #17438b;}
 
@@ -378,8 +365,8 @@ h1, h2{font-family: "Proxima Nova"!important;text-transform: uppercase; font-siz
 #about-second h3{font-size: 1.5rem;font-family: 'PlayfairDisplay-Regular';text-transform: none !important;}
 #about-second p{font-size: 0.9375rem;margin: 1.25rem 0;}
 #about-second ul{list-style-type: none;font-size: 0.9375rem;font-weight: bold;padding-left: 4.375rem;}
-#about-second ul li{margin: 1.5625rem 0;position: relative; display: flex;align-items: center;}
-#about-second .included_points__item_mark {margin-right: 1rem;}
+#about-second ul li{margin: 1.5625rem 0;position: relative;}
+#about-second ul li:before{content: "";position: absolute;width: 1.875rem;height: 1.875rem;left: -4.375rem;top:0.3125rem;background-size: contain;background-repeat: no-repeat;background-position: center;background-image: url(../img/check-about.png);}
 #about-second .col-md-5{height: -webkit-fill-available;height: fill-available;display: -webkit-box;display: -ms-flexbox;display: -webkit-flex;display: flex;-webkit-box-pack: center;-ms-flex-pack: center;-webkit-justify-content: center;justify-content: center;-webkit-box-align: center;-ms-flex-align: center;-webkit-align-items: center;align-items: center;}
 #about-second .col-md-5 img{max-width: 100%}
 #about-second .row-2{padding-top:4.375rem;}
@@ -397,369 +384,13 @@ h1, h2{font-family: "Proxima Nova"!important;text-transform: uppercase; font-siz
 #clients .show-li{color: #17438b;font-size: 0.9375rem;cursor: pointer;}
 #clients h3{font-size: 1.5rem;font-family: 'PlayfairDisplay-Regular';text-transform: none !important;}
 
-.accounting_servics_background {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 32.5rem;
-    background-image: url(../img/5-service.png);
-}
-
-.business_support_background {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 32.5rem;
-    background-image: url(../img/4-service.png);
-}
-
-.bankruptcy_background {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 32.5rem;
-    background-image: url(../img/3-service.png);
-}
-
-.business_registration_background {
-    background-position: bottom;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 32.5rem;
-    background-image: url(../img/2-service.png);
-}
-
-.real_estate_background {
-    background-position: bottom;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 32.5rem;
-    background-image: url(../img/6-service.png);
-}
-
-.accounting_servics_main_content p, .legal_servics_main_content p, .business_support_main_content p{
-    font-size: 1.875rem;
-    color: #fefefe;
-    font-family: "Playfair Display";
-}
-
-.included_points {
-    position: relative;
-    width: 100%;
-    padding: 14.375rem 6.25rem 6.25rem;
-}
-
-#legal_servics_points .included_points_content, #business_support_points .included_points_content {
-    width: 100%;
-}
-
-.included_points_content {
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.included_points h2 {
-    display: block;
-    width: 100%;
-    font-size: 1.25rem;
-    color: #282828;
-    font-family: "Playfair Display";
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.included_points__item {
-    width: 50%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 0.5rem 0;
-}
-
-.included_points__item span {
-    font-size: 0.9375rem;
-    line-height: 1.375rem;
-    color: #000000;
-    font-family: "Proxima Nova";
-    font-weight: bold;
-    display: block;
-    margin-left: 1rem;
-}
-
-#legal_servics_points .included_points__item:nth-of-type(6), 
-#legal_servics_points .included_points__item:nth-of-type(4),
-#legal_servics_points .included_points__item:nth-of-type(2),
-#business_support_points .included_points__item:nth-of-type(6), 
-#business_support_points .included_points__item:nth-of-type(4),
-#business_support_points .included_points__item:nth-of-type(2){
-    padding-left: unset;
-}
-
-.included_points__item:nth-of-type(6), 
-.included_points__item:nth-of-type(4),
-.included_points__item:nth-of-type(2)
- {
-    padding-left: 4rem;
-}
-
-.included_points__item_mark {
-    width: 1.5rem;
-    height: 1.5rem;
-    border-radius: 50%;
-    background-color: #E6EBF2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.included_points__item_mark svg {
-    width: 60%;
-}
-
-.included_points__item_img {
-    fill: #1A458A;
-}
-
-.included_points__item:hover .included_points__item_img {
-    fill: #E6EBF2;
-}
-
-.included_points__item:hover .included_points__item_mark {
-    background-color: #1A458A;
-}
-
-.accounting_services_btn_message .sbmt-btn  {
-    width: auto!important;
-    display: block;
-    margin: 3rem auto 0!important;
-}
-
-.legal_servics_background {
-    background-position: bottom;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 32.5rem;
-    background-image: url(../img/1-service.png);
-}
-
-.menu__icon {
-    display: none;
-    margin-top: 1.2rem;
-    width: 2.1rem;
-    height: 2.1rem;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    cursor: pointer;
-}
-
-.hidden_telephon {
-    display: none!important;
-}
-
-.hidden_telephon .tel_number {
-    margin: 0 auto;
-}
-
-.menu__icon span {
-    display: block;
-    position: absolute;
-    height: 2px;
-    width: 100%;
-    background-color: #000000;
-    opacity: 1;
-    left: 0;
-    transform: rotate(0deg);
-
-    transition: .25s ease-in-out;
-}
-
-.menu__icon span:nth-child(1) {
-    top: 2.5rem;
-}
-
-.menu__icon span:nth-child(2),
-.menu__icon span:nth-child(3) {
-    top: 3rem;
-}
-
-.menu__icon span:nth-child(4) {
-    top: 3.5rem;
-}
-
-.header_burger_menu.menu_state_open .menu__icon span {
-    background-color: #fff;
-}
-
-.header_burger_menu.menu_state_open .menu__icon span:nth-child(1) {
-    top: 1rem;
-    width: 0%;
-    right: 50%;
-}
-
-.header_burger_menu.menu_state_open .menu__icon span:nth-child(2) {
-    transform: rotate(45deg);
-}
-
-.header_burger_menu.menu_state_open .menu__icon span:nth-child(3) {
-    transform: rotate(-45deg);
-}
-
-.header_burger_menu.menu_state_open .menu__icon span:nth-child(4) {
-    top: 1rem;
-    width: 0%;
-    left: 50%;
-}
-
-
-.header_burger_menu.menu_state_open .menu__icon span:nth-child(1) {
-    top: 1rem;
-    width: 0%;
-    right: 50%;
-}
-
-.menu_visible {
-    opacity: 1;
-    z-index: 10;
-    height: auto;
-}
-
-@media screen and (max-width: 768px) {
-    .header_burger_menu {
-        z-index: 1001;
-    }
-
-    .hidden_telephon {
-        display: block!important;
-    }
-    
-    .menu__icon {
-        display: inline-block;
-      }
-
-    .nav-number .fa-phone {
-        display: none;
-    }
-     
-      .navbar ul {
-          display: none;
-      } 
-      
-    .menu__links {
-        position: fixed;
-        top: 0rem;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        z-index: 1000;
-        overflow: auto;
-        color: #fff;
-      }
-
-      .navbar-botom a {
-        color: #fff;
-        font-weight: normal;
-    }
-    .menu__links-item {
-        display: block;
-        padding: 0.8rem 0;
-        text-align: center;
-        font-weight: bold;
-      }
-    
-    .menu__links-item:hover {
-        border-top: 1px solid rgba(255, 0, 0, 0);
-        border-bottom: 1px solid rgba(255, 0, 0, 0);
-    }
-
-    .menu__icon {
-        display: inline-block;
-        width: 2.8rem;
-        height: 2.2rem;
-        cursor: pointer;
-        margin: 1rem;
-        z-index: 1001;
-    }
-
-
-    .menu__icon span {
-        display: block;
-        position: absolute;
-        width: 100%;
-        border-radius: 0.5rem;
-        opacity: 1;
-        right: 0;
-        transform: rotate(0deg);
-        
-        transition: .25s ease-in-out;
-    }
-
-
-    .header_burger_menu.menu_state_open .menu__icon span:nth-child(2) {
-        transform: rotate(45deg);
-    }
-
-    .header_burger_menu.menu_state_open .menu__icon span:nth-child(3) {
-        transform: rotate(-45deg);
-    }
-
-    .header_burger_menu.menu_state_open .menu__icon span:nth-child(4) {
-        width: 0%;
-        right: 50%;
-    }
-
-    .header_burger_menu.menu_state_open .menu__links {
-        display: block;  
-        background-color: rgba(23, 67, 139, 0.9);
-        padding-top: 3rem!important;
-    }
-}
-
-
 @media screen and (min-width: 320px) and (max-width: 365px) {
     html, body{
         font-size: 12px;
     }
 
-    #main .main-pagination {
-        left: 40%;
-    }
-
-    #main h1 {
-        text-align: center;
-    }
-
-    .navbar ul li {
-        font-size: 1.5rem;
-    }
-
     .navbar .container {
         flex-wrap: wrap;
-        justify-content: flex-end;
-        padding: 0;
-    }
-
-    .navbar hr {
-        display: none;
-    }
-
-    .nav-logo {
-        padding: 1.5rem 0 1.5rem 1.5rem;
-    }
-
-    .navbar-top {
-        flex-direction: column-reverse;
-    }
-
-    .navbar-top .city {
-        margin-top: -3rem;
-        padding-top: 2rem;
-        padding-left: 1.5rem;
-        background-color: #f2f2f2;
-        color: #262626;
     }
 
     .navbar-top, .right-block,  .nav-logo, .city {
@@ -767,12 +398,11 @@ h1, h2{font-family: "Proxima Nova"!important;text-transform: uppercase; font-siz
     }
 
     .right-block {
-        display: none;
+        justify-content: center;
     }
 
     .navbar ul li {
-        width: 100%;
-        justify-content: center;
+        width: 25%;
     }
 
     .navbar ul li:nth-child(5) {
@@ -781,33 +411,10 @@ h1, h2{font-family: "Proxima Nova"!important;text-transform: uppercase; font-siz
 
     #main ul {
         display: block;
-        text-align: center;
-    }
-
-    #main ul li {
-        font-size: 1rem;
-    }
-
-    #main .more-btn {
-        margin: 2.875rem auto 0;
     }
 
     #culture .advantage {
-        width: 100%;
-        padding: 0 4rem;
-        text-align: center;
-    }
-
-    #culture .advantage_img {
-        margin: 0 auto 1.875rem;
-    }
-
-    #culture {
-        padding: 14.375rem 0 0;
-    }
-
-    #culture h5 {
-        width: 100%;
+        width: 50%;
     }
 
     #zay h2, #zay h4 {
@@ -818,84 +425,11 @@ h1, h2{font-family: "Proxima Nova"!important;text-transform: uppercase; font-siz
         display: flex;
         flex-wrap: wrap;
         width: 100%;
-        padding: 0rem 10%;
-    }
-
-    #zay .styled-select {
-        width: 100%;
-    }
-
-    #zay h4, #messages h4 {
-        font-size: 1.2rem;
-        margin-top: 2rem;
-    }
-
-    #zay br {
-        display: none;
-    }
-
-    #trust img {
-        width: 3.5rem;
-        height: 3.5rem;
     }
 
     #zay select, #zay input, #messages select, #messages input {
         width: 100%;
         margin: 1rem auto;
-    }
-
-    #article .article-more {
-        margin-bottom: 1.7rem;
-    }
-
-    #map .right-block {
-        padding: 8.0625rem 5rem 11rem;
-    }
-
-    #map h2 {
-        text-align: center;
-    }
-
-    #map .zay-btn {
-        font-size: 1rem;
-    }
-
-    #article h4, #article .article-more {
-        font-size: 1rem;
-    }
-
-    #trust h1 {
-        margin-bottom: 0;
-    }
-
-    #abonem .right-block {
-        display: block;
-    }
-
-    #abonem .overlay {
-        padding: 3.125rem 3.375rem;;
-    }
-
-    #history {
-        padding: 4rem 0;
-    }
-
-    .included_points {
-        width: 100%;
-        padding: 14.375rem 1.2rem 6.25rem;
-    }
-
-    .included_points__item {
-        width: 100%;
-        flex-wrap: unset;
-    }
-
-    .accounting_servics_main_content p, .legal_servics_main_content p, .business_support_main_content p {
-        text-align: center;
-    }
-
-    #map ul li {
-        text-align: center;
     }
 
     #zay .sbmt-btn, #messages .sbmt-btn {
@@ -1016,37 +550,13 @@ h1, h2{font-family: "Proxima Nova"!important;text-transform: uppercase; font-siz
 }
 
 @media screen and (min-width: 366px) and (max-width: 375px)   {
-    html, body {
-        font-size: 14px;
-    }
-    #main h1 {
-        text-align: center;
+    html, body{
+        font-size: 13px;
     }
 
+    
     .navbar .container {
         flex-wrap: wrap;
-        justify-content: flex-end;
-        padding: 0;
-    }
-
-    .navbar hr {
-        display: none;
-    }
-
-    .nav-logo {
-        padding: 1.5rem 0 1.5rem 1.5rem;
-    }
-
-    .navbar-top {
-        flex-direction: column-reverse;
-    }
-
-    .navbar-top .city {
-        margin-top: -3rem;
-        padding-top: 2rem;
-        padding-left: 1.5rem;
-        background-color: #f2f2f2;
-        color: #262626;
     }
 
     .navbar-top, .right-block,  .nav-logo, .city {
@@ -1054,130 +564,27 @@ h1, h2{font-family: "Proxima Nova"!important;text-transform: uppercase; font-siz
     }
 
     .right-block {
-        display: none;
-    }
-
-    .right-block__content_wrap {
-        width: 100%;
-        justify-content: flex-start;
+        justify-content: center;
     }
 
     .navbar ul li {
-        width: 100%;
-        justify-content: center;
-        font-size: 1.5rem;
-    }
-
-    #main .main-pagination {
-        left: 40%;
-    }
-
-    #culture .advantage_img {
-        margin: 0 auto 1.875rem;
+        width: 25%;
     }
 
     .navbar ul li:nth-child(5) {
         width: 100%;
     }
 
-    
-    #zay br {
-        display: none;
-    }
-
-    #abonem .right-block {
-        display: block;
-    }
-
-    #history {
-        padding: 4.25rem 0;
-    }
-
-    #abonem .overlay {
-        padding: 3.125rem 3.375rem;
-    }
-
-    #trust h1 {
-        margin-bottom: 0;
-    }
-
-    #article .article-more {
-        margin-bottom: 1.7rem;
-    } 
-
-    
     #main ul {
         display: block;
-        text-align: center;
-    }
-
-    #main ul li {
-        font-size: 1rem;
-    }
-
-    #main .more-btn {
-        margin: 2.875rem auto 0;
     }
 
     #culture .advantage {
         width: 50%;
     }
 
-    #culture .advantage {
-        width: 100%;
-        padding: 0 4rem;
-    }
-
-    #culture {
-        padding: 14.375rem 0 0;
-    }
-
-    #culture h5 {
-        width: 100%;
-        text-align: center;
-    }
-
     #zay h2, #zay h4 {
         line-height: 2rem;
-    }
-
-    #zay form, #messages form {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        padding: 0rem 10%;
-    }
-
-    #zay .styled-select {
-        width: 100%;
-    }
-
-    #zay h4, #messages h4 {
-        font-size: 1.2rem;
-        margin-top: 2rem;
-    }
-
-    #trust img {
-        width: 3.5rem;
-        height: 3.5rem;
-    }
-
-    .included_points {
-        width: 100%;
-        padding: 14.375rem 1.2rem 6.25rem;
-    }
-
-    .included_points__item {
-        width: 100%;
-        flex-wrap: unset;
-    }
-
-    .included_points__item span {
-        width: 80%;
-    }
-
-    .accounting_servics_main_content p, .legal_servics_main_content p, .business_support_main_content p {
-        text-align: center;
     }
 
     #zay form, #messages form {
@@ -1193,22 +600,6 @@ h1, h2{font-family: "Proxima Nova"!important;text-transform: uppercase; font-siz
 
     #zay .sbmt-btn, #messages .sbmt-btn {
         width: 100%;
-    }
-
-    #map .right-block {
-        padding: 8.0625rem 3.0625rem 11rem;
-    }
-
-    #map .zay-btn {
-        font-size: 1rem;
-    }
-
-    #article h4, #article .article-more {
-        font-size: 1rem;
-    }
-
-    #map h2, #map ul {
-        text-align: center;
     }
 
     #map .call_action_container {
@@ -1334,38 +725,8 @@ h1, h2{font-family: "Proxima Nova"!important;text-transform: uppercase; font-siz
             font-size: 14px;
         }
     
-        #main h1 {
-            text-align: center;
-        }
-
-        #culture {
-            padding-bottom: 0;
-        }
-    
         .navbar .container {
             flex-wrap: wrap;
-            justify-content: flex-end;
-            padding: 0;
-        }
-    
-        .navbar hr {
-            display: none;
-        }
-    
-        .nav-logo {
-            padding: 1.5rem 0 1.5rem 1.5rem;
-        }
-    
-        .navbar-top {
-            flex-direction: column-reverse;
-        }
-    
-        .navbar-top .city {
-            margin-top: -3rem;
-            padding-top: 2rem;
-            padding-left: 1.5rem;
-            background-color: #f2f2f2;
-            color: #262626;
         }
     
         .navbar-top, .right-block,  .nav-logo, .city {
@@ -1373,68 +734,19 @@ h1, h2{font-family: "Proxima Nova"!important;text-transform: uppercase; font-siz
         }
     
         .right-block {
-            display: none;
-        }
-    
-        .right-block__content_wrap {
-            width: 100%;
-            justify-content: flex-start;
+            justify-content: center;
         }
     
         .navbar ul li {
-            width: 100%;
-            justify-content: center;
-            font-size: 1.5rem;
-        }
-    
-        #main .main-pagination {
-            left: 40%;
-        }
-    
-        #culture .advantage_img {
-            margin: 0 auto 1.875rem;
+            width: 25%;
         }
     
         .navbar ul li:nth-child(5) {
             width: 100%;
         }
     
-        
-        #zay br {
-            display: none;
-        }
-    
-        #abonem .right-block {
-            display: block;
-        }
-    
-        #history {
-            padding: 4.25rem 0;
-        }
-    
-        #abonem .overlay {
-            padding: 3.125rem 3.375rem;
-        }
-    
-        #trust h1 {
-            margin-bottom: 0;
-        }
-    
-        #article .article-more {
-            margin-bottom: 1.7rem;
-        } 
-    
         #main ul {
             display: block;
-            text-align: center;
-        }
-    
-        #main ul li {
-            font-size: 1rem;
-        }
-    
-        #main .more-btn {
-            margin: 2.875rem auto 0;
         }
     
         #culture .advantage {
@@ -1443,22 +755,6 @@ h1, h2{font-family: "Proxima Nova"!important;text-transform: uppercase; font-siz
     
         #zay h2, #zay h4 {
             line-height: 2rem;
-        }
-    
-        #zay form, #messages form {
-            display: flex;
-            flex-wrap: wrap;
-            width: 100%;
-            padding: 0rem 10%;
-        }
-    
-        #zay .styled-select {
-            width: 100%;
-        }
-    
-        #zay h4, #messages h4 {
-            font-size: 1.2rem;
-            margin-top: 2rem;
         }
     
         #zay form, #messages form {
@@ -1475,38 +771,7 @@ h1, h2{font-family: "Proxima Nova"!important;text-transform: uppercase; font-siz
         #zay .sbmt-btn, #messages .sbmt-btn {
             width: 100%;
         }
-
-        
-    #trust img {
-        width: 3.5rem;
-        height: 3.5rem;
-    }
-
-    #article h4, #article .article-more {
-        font-size: 1rem;
-    }
-
-    .accounting_servics_main_content p, .legal_servics_main_content p, .business_support_main_content p {
-        text-align: center;
-    }
-
-    .included_points {
-        width: 100%;
-        padding: 14.375rem 1.2rem 6.25rem;
-    }
-
-    .included_points__item {
-        width: 100%;
-        flex-wrap: unset;
-    }
-
-    .included_points__item span {
-        width: 80%;
-    }
-
-    #map ul {
-        text-align: center;
-    }
+    
         #map .call_action_container {
             flex-direction: column;
         }
@@ -1631,143 +896,6 @@ h1, h2{font-family: "Proxima Nova"!important;text-transform: uppercase; font-siz
             font-size: 15px;
         }
 
-        #main h1 {
-            text-align: center;
-        }
-
-        #culture {
-            padding-bottom: 0;
-        }
-    
-        .navbar .container {
-            flex-wrap: wrap;
-            justify-content: flex-end;
-            padding: 0;
-        }
-    
-        .navbar hr {
-            display: none;
-        }
-    
-        .nav-logo {
-            padding: 1.5rem 0 1.5rem 1.5rem;
-        }
-    
-        .navbar-top {
-            flex-direction: column-reverse;
-        }
-    
-        .navbar-top .city {
-            margin-top: -3rem;
-            padding-top: 2rem;
-            padding-left: 1.5rem;
-            background-color: #f2f2f2;
-            color: #262626;
-        }
-    
-        .navbar-top, .right-block,  .nav-logo, .city {
-            width: 100%;
-        }
-    
-        .right-block {
-            display: none;
-        }
-    
-        .right-block__content_wrap {
-            width: 100%;
-            justify-content: flex-start;
-        }
-    
-        .navbar ul li {
-            width: 100%;
-            justify-content: center;
-            font-size: 1.5rem;
-        }
-    
-        #main .main-pagination {
-            left: 40%;
-        }
-    
-        #culture .advantage_img {
-            margin: 0 auto 1.875rem;
-        }
-    
-        .navbar ul li:nth-child(5) {
-            width: 100%;
-        }
-    
-        
-        #zay br {
-            display: none;
-        }
-    
-        #abonem .right-block {
-            display: block;
-        }
-    
-        #history {
-            padding: 4.25rem 0;
-        }
-    
-        #abonem .overlay {
-            padding: 3.125rem 3.375rem;
-        }
-    
-        #trust h1 {
-            margin-bottom: 0;
-        }
-    
-        #article .article-more {
-            margin-bottom: 1.7rem;
-        } 
-    
-        #main ul {
-            display: block;
-            text-align: center;
-        }
-    
-        #main ul li {
-            font-size: 1rem;
-        }
-    
-        #main .more-btn {
-            margin: 2.875rem auto 0;
-        }
-
-        #main ul {
-            display: block;
-            text-align: center;
-        }
-    
-        #main ul li {
-            font-size: 1rem;
-        }
-    
-        #main .more-btn {
-            margin: 2.875rem auto 0;
-        }
-
-        #culture .advantage {
-            width: 50%;
-        }
-
-        #zay form {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        #zay .sbmt-btn, #zay select, #zay input, #zay option, #zay .styled-select {
-            width: 45%;
-        }
-
-        #zay select, #zay input, #zay option {
-            margin: 1rem auto;
-        }
-
-        #trust img {
-            width: 4.25rem;
-            height: 4.25rem;
-        }
                 
         .table_price{
             display: none;
@@ -1777,61 +905,9 @@ h1, h2{font-family: "Proxima Nova"!important;text-transform: uppercase; font-siz
             width: 100%;
         }
 
-        #messages form {
-            display: flex;
-            flex-wrap: wrap;
-            margin-top: 3.375rem;
-        }
-
-        #map ul {
-            text-align: center;
-        }
-
-        #map iframe {
-            display: none;
-        }
-
-        #footer hr {
-            margin-top: 1.5rem!important;
-        }
-
-        #messages select, #messages input {
-            width: 48%;
-        }
-
-        #messages .sbmt-btn {
-            width: 100%;
-            margin-top: 1.5rem;
-        }
         
         #signup_section, #signin_section {
             padding: 17.5rem 0;
-        }
-
-        #about-second .about_main_content {
-            flex-direction: column;
-        }
-    
-        #about-second .row-2 {
-            padding-top: 0;
-            flex-direction: column-reverse;
-        }
-    
-        #about-second .col-md-5 {
-            height: auto;
-            margin: 2rem;
-        }
-
-        .accounting_servics_main_content p, .legal_servics_main_content p, .business_support_main_content p {
-            text-align: center;
-        }
-
-        .included_points {
-            padding: 14.375rem 1rem 6.25rem;
-        }
-
-        .included_points__item span {
-            width: 80%;
         }
 
         .registration_form, .signin_form {
@@ -1882,126 +958,29 @@ h1, h2{font-family: "Proxima Nova"!important;text-transform: uppercase; font-siz
         html, body{
             font-size: 15px;
         }
-    
+
         .navbar .container {
             flex-wrap: wrap;
-            justify-content: flex-end;
-            padding: 0;
-            width: auto;
         }
-    
-        .navbar hr {
-            display: none;
-        }
-    
-        .nav-logo {
-            padding: 1.5rem 0 1.5rem 1.5rem;
-        }
-    
-        .navbar-top {
-            flex-direction: column-reverse;
-        }
-    
-        .navbar-top .city {
-            margin-top: -3rem;
-            padding-top: 2rem;
-            padding-left: 1.5rem;
-            background-color: #f2f2f2;
-            color: #262626;
-        }
-    
+
         .navbar-top, .right-block,  .nav-logo, .city {
             width: 100%;
+        }
+
+        .right-block {
+            justify-content: center;
+        }
+
+        .navbar ul li {
+            width: 25%;
         }
 
         .navbar ul li:nth-child(5) {
             width: 100%;
         }
     
-        .right-block {
-            display: none;
-        }
-    
-        .right-block__content_wrap {
-            width: 100%;
-            justify-content: flex-start;
-        }
-    
-        .navbar ul li {
-            width: 100%;
-            justify-content: center;
-            font-size: 1.5rem;
-        }
-
-        #main h1 {
-            text-align: center;
-        }
-
-        #culture {
-            padding-bottom: 0;
-        }
-
-        #culture .advantage_img {
-            margin: 0 auto 1.875rem;
-        }
-
-        #culture h5 {
-            margin: 0 auto;
-            text-align: center;
-        }
-       
-    
-        #main .main-pagination {
-            left: 40%;
-        }
-    
-        #zay br {
-            display: none;
-        }
-    
-        #abonem .right-block {
-            display: block;
-        }
-    
-        #history {
-            padding: 4.25rem 0;
-        }
-    
-        #abonem .overlay {
-            padding: 3.125rem 3.375rem;
-        }
-    
-        #trust h1 {
-            margin-bottom: 0;
-        }
-    
-        #article .article-more {
-            margin-bottom: 1.7rem;
-        } 
-    
         #main ul {
             display: block;
-            text-align: center;
-        }
-    
-        #main ul li {
-            font-size: 1rem;
-        }
-    
-        #main .more-btn {
-            margin: 2.875rem auto 0;
-        }
-
-        #main p {
-            text-align: center;
-        }
-
-        #zay .styled-select, #messages select, #messages input, #zay select, #zay input, #zay .sbmt-btn {
-            width: 48%;
-        }
-
-        #zay select, #zay input, #zay option {
-            margin: 1rem auto;
         }
     
         #culture .advantage {
@@ -2018,23 +997,11 @@ h1, h2{font-family: "Proxima Nova"!important;text-transform: uppercase; font-siz
             width: 100%;
         }
 
-        #trust .col-md-3 {
-            width: 50%!important;
-        }
-
-        #trust .row:last-of-type {
-            display: flex;
-            flex-wrap: wrap;
-        }
-    
-        #messages .sbmt-btn {
+        #zay .sbmt-btn, #messages .sbmt-btn {
             width: 100%;
             margin-top: 1rem;
         }
-
-        #map ul, #map h3 {
-            text-align: center;
-        }
+    
         
         #map .container-fluid {
             flex-direction: column;
@@ -2052,10 +1019,6 @@ h1, h2{font-family: "Proxima Nova"!important;text-transform: uppercase; font-siz
         #map .zay-btn {
             margin: 1rem auto 0;
         }
-
-        #footer .footer-links {
-            margin-top: 3rem;
-        }
     
         #culture .advantage:before {
             opacity: 0;
@@ -2070,12 +1033,9 @@ h1, h2{font-family: "Proxima Nova"!important;text-transform: uppercase; font-siz
            padding: 3rem;
        }
 
-       .included_points {
-        padding: 14.375rem 2.5rem 6.25rem;
-       }
-
-       .included_points__item span {
-           width: 80%;
+       #messages select, #messages input, #zay select, #zay input {
+        width: 100%;
+        margin: 1rem auto;
        }
 
        #about-second .about_main_content {
@@ -2154,71 +1114,21 @@ h1, h2{font-family: "Proxima Nova"!important;text-transform: uppercase; font-siz
             font-size: 15px;
         }
 
-        .right-block {
-            width: 40%;
-        }
-
         .table_price{
             width: 25%;
-        }
-
-        .navbar-top {
-            flex-wrap: wrap;
-            width: 60%;
-        }
-
-        .right-block__content_wrap {
-            width: auto;
-        }
-
-        .main_content {
-            padding-left: 2rem;
-        }
-
-        #culture .advantage {
-            width: 50%;
         }
         
         #list table button {
             width: 100%;
         }
 
-        #culture {
-            padding-bottom: 0;
+        #map .container-fluid {
+            flex-direction: column;
+            max-height: unset;
         }
 
-        #culture .advantage_img {
-            margin: 0 auto 1.875rem;
-        }
-
-        #culture h5 {
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        #zay .sbmt-btn, #messages .sbmt-btn {
-            width: auto;
-        }
-
-        #trust .col-md-3 {
-            width: 50%!important;
-        }
-
-        #trust .row:last-of-type {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        #article .article-more {
-            margin-bottom: 1.7rem;
-        }
-
-        .included_points {
-            padding: 14.375rem 3.25rem 6.25rem;
-        }
-
-        .included_points__item span {
-            width: 80%;
+        #map .right-block {
+            width: 100%;
         }
 
         #map .call_action_container {
@@ -2234,9 +1144,14 @@ h1, h2{font-family: "Proxima Nova"!important;text-transform: uppercase; font-siz
             opacity: 0;
         }
 
-        #abonem .right-block, #abonem .left-block  {
+        #abonem .right-block {
             width: 100%;
         }
+
+       #map .right-block {
+           width: 100%;
+           padding: 3rem;
+       }
     }
 
     @media screen and (min-width: 1440px) and (max-width: 1600px) {

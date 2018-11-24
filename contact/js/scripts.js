@@ -106,3 +106,30 @@ wow.init();
 		$('body,html').animate({scrollTop: top}, 1500);
 	});
 });
+
+var select_city = document.getElementsByClassName('select_city')[0];
+var select_city__options = document.getElementsByClassName('select_city__option');
+var nav_href_tel = document.getElementsByClassName('nav_href_tel')[0];
+var tel_number = document.getElementsByClassName('tel_number')[0];
+var value_arr = [];
+var tel_numbers = ["+7 (843) 518-89-89", "+7 (843) 518-00-00", "+7 (843) 518-11-11", "+7 (843) 518-22-22", "+7 (843) 518-33-33", "611-111-111", "+7 (843) 518-44-44", "+7 (843) 518-55-55", "+7 (843) 518-66-66", "+7 (843) 518-77-77"];
+
+
+window.onload = function() {
+	tel_number.innerHTML = tel_numbers[0];
+    nav_href_tel.href = tel_numbers[0];
+
+}
+
+select_city.addEventListener('change', function() {
+	for(var i = 0; i < select_city__options.length; i++) {
+  	value_arr.push(select_city__options[i].value);
+  }
+	for(var j = 0; j < select_city__options.length; j++) {
+  	if(select_city__options[j].selected === true && select_city__options[j].value == value_arr[j]) {
+  		tel_number.innerHTML = tel_numbers[j];
+    	nav_href_tel.href = tel_numbers[j];
+    }
+  }
+});
+

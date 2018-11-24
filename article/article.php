@@ -1,7 +1,6 @@
 <?php
-  header('Last-Modified: '.gmdate('D, M d Y H:i:s',filemtime('page.php')).'GMT');
-  require "../database_controll/db.php";
-  $blog = R::load('blogs', $_GET['id'] );
+require "blogs.php";
+$blog = R::load('blogs', $_GET['id'] );
 ?>
 <!DOCTYPE html>
 <html>
@@ -10,20 +9,66 @@
 	<meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, width=device-width, user-scalable=no">
     <meta name="description" content="<?php echo $blog->descr ?>">
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
 	<link rel="shortcut icon" type="image/png" href="../img/favicon.png">
+	<link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="../css/animate.css">
+	<link rel="stylesheet" type="text/css" href="../css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/modal.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">	
 	
 </head>
 <body>
-<?php
-	require('../header.php');
-	?>
+<div class="navbar">
+		<div class="container">
+			<div class="navbar-top">
+				<div class="nav-logo"><a class="nav-href" href="/">ООО «ЮРБИЗНЕСГРУП»</a></div>
+				<div class="city">Ваш город:
+					<select class='select_city'>
+						<option class = 'select_city__option' value='moscow'>Москва</option>
+						<option class = 'select_city__option' value='voronezh'>Воронеж</option>
+						<option class = 'select_city__option' value='cheboksary'>Чебоксары</option>
+						<option class = 'select_city__option' value='kazan'>Казань</option>
+						<option class = 'select_city__option' value='ulyanovsk'>Ульяновск</option>
+						<option class = 'select_city__option' value='samara'>Самара</option>
+						<option class = 'select_city__option' value='izhevsk'>Ижевск</option>
+						<option class = 'select_city__option' value='ufa'>Уфа</option>
+						<option class = 'select_city__option' value='naberezhnyeChelny'>Набережные Челны</option>
+						<option class = 'select_city__option' value='perm'>Пермь</option>
+					</select>
+				</div>
+				</div>
+		        <div class="right-block">
+					<div class="nav-number"><a class="nav_href_tel" href="tel: +7(843)518-89-89"><i class="fa fa-phone"></i><span class='tel_number'>+7 (843) 518-89-89</span> </a></div>
+		            <div class="search-btn">
+		              <a class="search-ico"><i class="fa fa-search"></i></a>
+		            </div>
+		        </div>
+			</div>
+			<hr />
+			<div class="navbar-botom">
+				<ul>
+					<li><a href="../about">О нас</a></li>
+					<li><a href="../services">Услуги</a></li>
+					<li><a href="../article">Статьи</a></li>
+					<li><a href="../contact">Контакты</a></li>
+					<li><a href="../signup">Регистрация</a> | <a href="../signin">Вход</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
     <section id="main">
     	<div class="swiper-container">
 	    		<div class="swiper-slide slide-article" style="background-image: url(<?php if(isset($blog->img) && $blog->img != '../database_controll/uploads/') { echo '/'.$blog->img.''; } else { echo '../img/article-img.png'; } ?>);">
 					<div class="overlay">
 						<div class="container" style="text-align: center;">
 			    			<h1><?php echo $blog->offer ?></h1>
-			    			<a href="#" class="more-btn all-btn"><svg style="transform: rotate(180deg);margin-right: 15px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 12" width="17" height="12">
+			    			<a href="../article" class="more-btn all-btn"><svg style="transform: rotate(180deg);margin-right: 15px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 12" width="17" height="12">
 	<style>
 		tspan { white-space:pre }
 		.shp0 { fill: #fff } 
@@ -33,8 +78,8 @@
 			    		</div>
 			    	</div>
 				</div>
-	    	<div class="swiper-button-prev main-prev"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'><path d='M0,22L22,0l2.1,2.1L4.2,22l19.9,19.9L22,44L0,22L0,22L0,22z' fill='#fff'/></svg></div>
-	    	<div class="swiper-button-next main-next"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'><path d='M27,22L27,22L5,44l-2.1-2.1L22.8,22L2.9,2.1L5,0L27,22L27,22z' fill='#fff'/></svg></div>
+	    	<div id="prev" class="swiper-button-prev main-prev"><input type="hidden" value="<?=prev_article()?>"/><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'><path d='M0,22L22,0l2.1,2.1L4.2,22l19.9,19.9L22,44L0,22L0,22L0,22z' fill='#fff'/></svg></div>
+	    	<div id="next" class="swiper-button-next main-next"><input type="hidden" value="<?=next_article()?>"/><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'><path d='M27,22L27,22L5,44l-2.1-2.1L22.8,22L2.9,2.1L5,0L27,22L27,22z' fill='#fff'/></svg></div>
     	</div>
     </section>
 
@@ -67,29 +112,20 @@
     		</div>
     		<div class="col-md-4">
     			<h5>Последние статьи</h5>
-    			<div class="col-md-12">
-    				<div class="date">27.08.2018, 20:25</div><div class="shows"></div><div class="hashtag"></div>
-    				<h6>Порядок регистрации фирмы</h6>
-    				<p>Первостепенная задача – это составление действующего Устава фирмы, который должен быть оформлен в строгом соответствии с... </p>
-    			</div>
-    			<div class="col-md-12">
-    				<div class="date">27.08.2018, 20:25</div><div class="shows"></div><div class="hashtag"></div>
-    				<h6>Порядок регистрации фирмы</h6>
-    				<p>Первостепенная задача – это составление действующего Устава фирмы, который должен быть оформлен в строгом соответствии с... </p>
-    			</div>
-    			<div class="col-md-12">
-    				<div class="date">27.08.2018, 20:25</div><div class="shows"></div><div class="hashtag"></div>
-    				<h6>Порядок регистрации фирмы</h6>
-    				<p>Первостепенная задача – это составление действующего Устава фирмы, который должен быть оформлен в строгом соответствии с... </p>
-    			</div>
-    			<div class="col-md-12 social">
-    				<h5>Поделиться в социальных сетях:</h5>
-    				<i class="fa fa-vk"></i><i class="fa fa-facebook"></i><i class="fa fa-twitter"></i>
-    			</div>
+    			<?=last_articles()?>
     		</div>
     	</div>
     </section>
-
+    
+    <script>
+    	$('div#prev').on('click', function(e) {
+    		location.assign(e.currentTarget.firstChild.value);
+    	});
+    	
+    	$('div#next').on('click', function(e) {
+    		location.assign(e.currentTarget.firstChild.value);
+    	});
+    </script>
 <?php
 require('../footer.php');
 ?>

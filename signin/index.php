@@ -10,7 +10,7 @@
        if( password_verify($data['password'], $user->password))
          {
            $_SESSION['logged_user'] = $user;
-           header ('Location: http://test.5186688.ru/admin/admin.php');
+           header ('Location: http://test.5186688.ru/admin/index.php');
            exit;
          }
        else
@@ -33,8 +33,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<meta name="viewport" content="initial-scale=1, width=device-width, user-scalable=no">
-  <link rel="shortcut icon" type="image/png" href="../img/logo1.png">
+   <link rel="shortcut icon" type="image/png" href="../img/logo1.png">
+   <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT:400,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
+   <link href="https://fonts.googleapis.com/css?family=Marmelad" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="../css/style.css">	
 	<title>Войти | Инфомационный портал</title>
 	<meta charset="utf-8">
 </head>
@@ -42,9 +48,46 @@
 <style>
 	    #map{display:none}
 	</style>
-<?php
-	require('../header.php');
-	?>
+	<div class="navbar">
+		<div class="container">
+			<div class="navbar-top">
+				<div class="nav-logo"><a class="nav-href" href="/">ООО «ЮРБИЗНЕСГРУП»</a></div>
+				<div class="city">Ваш город:
+					<select class='select_city'>
+						<option class = 'select_city__option' value='moscow'>Москва</option>
+						<option class = 'select_city__option' value='voronezh'>Воронеж</option>
+						<option class = 'select_city__option' value='cheboksary'>Чебоксары</option>
+						<option class = 'select_city__option' value='kazan'>Казань</option>
+						<option class = 'select_city__option' value='ulyanovsk'>Ульяновск</option>
+						<option class = 'select_city__option' value='samara'>Самара</option>
+						<option class = 'select_city__option' value='izhevsk'>Ижевск</option>
+						<option class = 'select_city__option' value='ufa'>Уфа</option>
+						<option class = 'select_city__option' value='naberezhnyeChelny'>Набережные Челны</option>
+						<option class = 'select_city__option' value='perm'>Пермь</option>
+					</select>
+				</div>
+				</div>
+		        <div class="right-block">
+					<div class="right-block__content_wrap">
+						<div class="nav-number"><a class="nav_href_tel" href="tel: +7(843)518-89-89"><i class="fa fa-phone"></i><span class='tel_number'>+7 (843) 518-89-89</span> </a></div>
+		            	<div class="search-btn">
+		              		<a class="search-ico"><i class="fa fa-search"></i></a>
+		            	</div>
+						</div>
+		    		</div>
+				</div>
+			<hr />
+			<div class="navbar-botom container">
+				<ul>
+					<li><a href="about">О нас</a></li>
+					<li><a href="services">Услуги</a></li>
+					<li><a href="article">Статьи</a></li>
+					<li><a href="contact">Контакты</a></li>
+					<li class="signup_nav_section"><a href="signup">Регистрация</a> | <a href="signin">Вход</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
   <div id="signin_section">
     <div class="col-md-6 signin_form">
       <h1>Вход в личный кабинет</h1>
