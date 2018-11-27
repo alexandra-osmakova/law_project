@@ -171,7 +171,7 @@
 <script src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript"></script>
 <script type="text/javascript" src="/js/scripts.js"></script>
 <script type="text/javascript" src="js/swiper.min.js"></script>
-<!--
+
 <script type="text/javascript">
 	
 	$('#list button').click(function () {
@@ -403,106 +403,103 @@ $(window).scroll(function () {
 <script type="text/javascript" src="js/swiper.min.js"></script>
 <script src="js/jquery.spincrement.min.js"></script>
 <script type="text/javascript">
-$(".spincrement").spincrement();
-
-$(window).scroll(function(){
-    if ($(window).scrollTop() > 100) {
-        $('.navbar').css('top',"-70px").css('box-shadow',"0 0 15px rgba(23, 67, 139, 0.4)");
-    }
-    else {
-        $('.navbar').css('top',"0").css('box-shadow',"none");
-    }
-});
-
-$('.search-ico').click(function(){
-	if($('.navbar-top form').hasClass('active')){
-		$('.navbar-top form').removeClass('active').css('opacity', "0").css('z-index', "-1");
-	}
-	else{
-		$('.navbar-top form').addClass('active').css('opacity', "1").css('z-index', "1");
-	}
-});
-
-	    var swiper = new Swiper('#main .swiper-container', {
-	      pagination: {
-	        el: '.swiper-pagination.main-pagination',
-	        clickable: true,
-	      },
-	      autoplay: {
-	        delay: 8000,
-	        disableOnInteraction: false,
-	      },
-	      loop: true,
-	      navigation: {
-	        nextEl: '.swiper-button-next.main-next',
-	        prevEl: '.swiper-button-prev.main-prev',
-	      },
-	    });
-	    
-	if( window.screen.width <= 600 ){
-	    $('#ras-form').removeClass('fadeInRight');
-	    $('#ras-form').addClass('fadeInUp');
-      }
-      else if( window.screen.width <= 800 ){
-	  }
-      else{
-      };
-      
-      $('.show-li').click(function(){
-      	if($('.show-li').hasClass('active')){
-	      	$('.show-li').text('Ещё ...').removeClass('active');
-	      	$('.hide-li').css("display",'none');
-      	}
-      	else{
-	      	$('.show-li').text('Скрыть ...').addClass('active');
-	      	$('.hide-li').css("display",'block');
-      	}
-      });
-      
-      $('#list button').click(function(){
-		if($('#services-modal').hasClass('active')){
-			$('#services-modal').css('opacity',"0").css('z-index',"-1").removeClass('active');
+	
+	$('#list button').click(function () {
+		if ($('#services-modal').hasClass('active')) {
+			$('#services-modal').css('opacity', "0").css('z-index', "-1").removeClass('active');
 			$('#services-modal .modal-container').css('transform', "scale(0.5,0.5)");
-		    $('.modal-header h3').empty();
-		    $('table tr').removeClass('nameFirst');
-		}
-		else{
-			$('#services-modal').css('opacity',"1").css('z-index',"10000").addClass('active');
-			$('#services-modal .modal-container').css('transform',"scale(1,1)");
+			$('.modal-header h3').empty();
+			$('table tr').removeClass('nameFirst');
+		} else {
+			$('#services-modal').css('opacity', "1").css('z-index', "10000").addClass('active');
+			$('#services-modal .modal-container').css('transform', "scale(1,1)");
 			var name = $(this).parent();
 			var nameFirst = $(name).parent();
 			nameFirst.addClass('nameFirst')
 			$('.modal-header h3').text($('.nameFirst > td:first-child').text());
 		}
 	});
-	$('.services-close-modal').click(function(){
-			$('#services-modal').css('opacity',"0").css('z-index',"-1").removeClass('active');
-			$('#services-modal .modal-container').css('transform', "scale(0.5,0.5)");
-		    $('.modal-header h3').empty();
-		    $('table tr').removeClass('nameFirst');
+	$('.services-close-modal').click(function () {
+		$('#services-modal').css('opacity', "0").css('z-index', "-1").removeClass('active');
+		$('#services-modal .modal-container').css('transform', "scale(0.5,0.5)");
+		$('.modal-header h3').empty();
+		$('table tr').removeClass('nameFirst');
 	});
-		$(document).mouseup(function (e){ // событие клика по веб-документу
-		var div = $(".modal-container, .modal"); // тут указываем ID элемента
-		if (!div.is(e.target) // если клик был не по нашему блоку
-		    && div.has(e.target).length === 0) { // и не по его дочерним элементам
-			$('#services-modal').css('opacity',"0").css('z-index',"-1").removeClass('active');	
-			$('#services-modal .modal-container').css('transform', "scale(0.5,0.5)");
-		    $('.modal-header h3').empty();
-		    $('table tr').removeClass('nameFirst');
-		    $('.modal-overlay').removeClass('active');
-		    $('.modal').removeClass('active');
+	$('.search-ico').click(function () {
+		if ($('.navbar-top form').hasClass('active')) {
+			$('.navbar-top form').removeClass('active').css('opacity', "0").css('z-index', "-1");
+		} else {
+			$('.navbar-top form').addClass('active').css('opacity', "1").css('z-index', "1");
 		}
 	});
-            $(document).keydown(function(eventObject){
-                if (eventObject.which == 27){
-					$('#services-modal').css('opacity',"0").css('z-index',"-1").removeClass('active');	
-					$('#services-modal .modal-container').css('transform', "scale(0.5,0.5)");
-				    $('.modal-header h3').empty();
-		    		$('table tr').removeClass('nameFirst');
-		    		$('.modal-overlay').removeClass('active');
-		    		$('.modal').removeClass('active');
-                }
-            });
+
+	var swiper = new Swiper('#main .swiper-container', {
+		pagination: {
+			el: '.swiper-pagination.main-pagination',
+			clickable: true,
+		},
+		autoplay: {
+			delay: 8000,
+			disableOnInteraction: false,
+		},
+		loop: true,
+		navigation: {
+			nextEl: '.swiper-button-next.main-next',
+			prevEl: '.swiper-button-prev.main-prev',
+		},
+	});
+
+	if (window.screen.width <= 600) {
+		$('#ras-form').removeClass('fadeInRight');
+		$('#ras-form').addClass('fadeInUp');
+	} else if (window.screen.width <= 800) {} else {};
+
+	$('.show-li').click(function () {
+		if ($('.show-li').hasClass('active')) {
+			$('.show-li').text('Ещё ...').removeClass('active');
+			$('.hide-li').css("display", 'none');
+		} else {
+			$('.show-li').text('Скрыть ...').addClass('active');
+			$('.hide-li').css("display", 'block');
+		}
+	});
+	$(document).mouseup(function (e) { // событие клика по веб-документу
+		var div = $(".modal-container, .modal"); // тут указываем ID элемента
+		if (!div.is(e.target) // если клик был не по нашему блоку
+			&&
+			div.has(e.target).length === 0) { // и не по его дочерним элементам
+			$('#services-modal').css('opacity', "0").css('z-index', "-1").removeClass('active');
+			$('#services-modal .modal-container').css('transform', "scale(0.5,0.5)");
+			$('.modal-header h3').empty();
+			$('table tr').removeClass('nameFirst');
+			$('.modal-overlay').removeClass('active');
+			$('.modal').removeClass('active');
+		}
+	});
+	$(document).keydown(function (eventObject) {
+		if (eventObject.which == 27) {
+			$('#services-modal').css('opacity', "0").css('z-index', "-1").removeClass('active');
+			$('#services-modal .modal-container').css('transform', "scale(0.5,0.5)");
+			$('.modal-header h3').empty();
+			$('table tr').removeClass('nameFirst');
+			$('.modal-overlay').removeClass('active');
+			$('.modal').removeClass('active');
+		}
+	});
+	$(".spincrement").spincrement();
+
+$(window).scroll(function () {
+	if ($(window).scrollTop() > 100) {
+		if(window.screen.width <= 900) {
+			$('.navbar').css('top', "0px").css('box-shadow', "0 0 15px rgba(23, 67, 139, 0.4)");
+		}
+		else {
+			$('.navbar').css('top', "-70px").css('box-shadow', "0 0 15px rgba(23, 67, 139, 0.4)");
+		}
+	} else {
+		$('.navbar').css('top', "0").css('box-shadow', "none");
+	}
+});
 </script>
 </body>
 </html>
