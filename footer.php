@@ -256,7 +256,6 @@
 			$('.modal').removeClass('active');
 		}
 	});
-	$(".spincrement").spincrement();
 
 $(window).scroll(function () {
 	if ($(window).scrollTop() > 100) {
